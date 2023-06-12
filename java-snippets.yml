@@ -2,7 +2,7 @@ package_name: java-snippets
 package_title: Java Snippets
 package_desc: A collection of useful snippets for Java programming
 package_version: 0.1.0
-package_author: Bing
+package_author: Ikas73
 package_repo: https://github.com/ikas73/java-snippets
 
 matches:
