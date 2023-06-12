@@ -1,0 +1,72 @@
+package_name: java-snippets
+package_title: Java Snippets
+package_desc: A collection of useful snippets for Java programming
+package_version: 0.1.0
+package_author: Bing
+package_repo: https://github.com/bing/java-snippets
+
+matches:
+
+# Snippet for the main method
+- trigger: ":main"
+  replace: |
+    public static void main(String[] args) {
+      {{cursor}}
+    }
+
+# Snippet for the System.out.println method
+- trigger: ":sout"
+  replace: "System.out.println({{cursor}});"
+
+# Snippet for the Scanner class
+- trigger: ":scan"
+  replace: |
+    import java.util.Scanner;
+    Scanner {{name}} = new Scanner(System.in);
+    {{cursor}}
+  vars:
+  - name: name
+    type: input
+    params:
+      title: "Scanner name"
+
+# Snippet for the ArrayList class
+- trigger: ":arraylist"
+  replace: |
+    import java.util.ArrayList;
+    ArrayList<{{type}}> {{name}} = new ArrayList<{{type}}>();
+    {{cursor}}
+  vars:
+  - name: type
+    type: input
+    params:
+      title: "Element type"
+  - name: name
+    type: input
+    params:
+      title: "ArrayList name"
+
+# Snippet for the StringBuilder class
+- trigger: ":stringbuilder"
+  replace: |
+    StringBuilder {{name}} = new StringBuilder();
+    {{cursor}}
+  vars:
+  - name: name
+    type: input
+    params:
+      title: "StringBuilder name"
+
+# Snippet for the try-catch block
+- trigger: ":trycatch"
+  replace: |
+    try {
+      {{cursor}}
+    } catch ({{exception}} e) {
+      e.printStackTrace();
+    }
+  vars:
+  - name: exception
+    type: input
+    params:
+      title: "Exception type"
